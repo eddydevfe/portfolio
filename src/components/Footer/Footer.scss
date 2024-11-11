@@ -1,0 +1,76 @@
+@import '../../styles/styles.scss';
+
+.contact {
+  background-color: $font-color;
+  color: $light-font-color;
+  height: 300px;
+
+  .container {
+    height: 100%;
+  }
+
+  h4 {
+    color: $light-font-color;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  a {
+    color: $light-font-color;
+  }
+
+  .contact-icon > span,
+  .contact-icon > a {
+    color: $accent;
+    background-color: $bg-color-1;
+    padding: 0.7rem;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      @include scale-up;
+    }
+  }
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+
+.contact .contact-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-info {
+  div {
+    font-weight: 700;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.icon-group {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}

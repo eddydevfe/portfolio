@@ -1,0 +1,29 @@
+@import 'typography';
+@import 'colors';
+@import 'boilerplate';
+@import 'animations';
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+a {
+  color: $font-color;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 3rem;
+  }
+}

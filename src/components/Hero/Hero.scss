@@ -1,0 +1,104 @@
+@import "../../styles/styles.scss";
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color-2;
+}
+
+.hero-main {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-main > * {
+  flex: 1;
+}
+
+.hero-text {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.3;
+  }
+
+  h1 span {
+    font-size: 4rem;
+  }
+
+  p {
+    color: $lighter-font-color;
+    margin-bottom: 1rem;
+  }
+}
+
+.hero-text > span {
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-img-container,
+.hero-img {
+  border-radius: 50%;
+  width: 430px;
+  height: 430px;
+  flex: 0 0 auto;
+}
+
+.hero-img-container {
+  position: relative;
+  border: 4px solid $accent;
+}
+
+.hero-img {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 1;
+
+  img {
+    width: 100%;
+    z-index: -3;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    height: min-content;
+    padding: 3rem 0;
+  }
+
+  .hero-main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+
+  .hero-text > span {
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-img-container,
+  .hero-img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text h1 span {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,68 @@
+@import '../../styles/styles.scss';
+
+.about {
+  display: flex;
+  align-items: center;
+  background-color: $bg-color-1;
+  height: min-content;
+  max-width: 900px; // Temporary solution until I find a nice image to put in this section.
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.about-text {
+  h2 {
+    color: $accent;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    color: $lighter-font-color;
+  }
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  p {
+    color: $font-color;
+    font-weight: 700;
+
+    border-right: 1px solid $lighter-font-color;
+    padding-right: 2rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-text {
+    text-align: center;
+  }
+
+  .skills {
+    flex-direction: column;
+
+    p {
+      border-right: none;
+      padding-right: 0;
+
+      border-bottom: 1px solid $lighter-font-color;
+      padding-bottom: 2rem;
+    }
+
+    // Logos
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

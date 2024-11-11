@@ -1,0 +1,40 @@
+@import '../../styles/styles.scss';
+
+.project-img {
+  aspect-ratio: 16/10;
+  width: min(100%, 500px);
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  background-color: $bg-color-2;
+  border-radius: 5px;
+}
+
+.project-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes scroll-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(var(--scroll-distance, 0));
+  }
+}
+
+.project-img:hover img {
+  animation: scroll-down 15s linear;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 900px) {
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+}

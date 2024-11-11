@@ -1,0 +1,79 @@
+@import "../../styles/styles.scss";
+
+#projects {
+  background-color: $bg-color-2;
+  padding: 4rem 0;
+  text-align: center;
+
+  h4 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: $accent;
+  }
+}
+
+.project {
+  text-align: left;
+  background-color: $bg-color-1;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+  display: flex;
+  padding: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.project-details {
+  max-width: 550px;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: 2rem;
+    color: $accent;
+  }
+
+  p {
+    color: $lighter-font-color;
+    white-space: pre-line;
+  }
+}
+
+#projects span {
+  font-weight: 800;
+  color: $accent;
+  font-size: 1.5rem;
+}
+
+.project-icons {
+  display: flex;
+  gap: 2rem;
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .project,
+  .project:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .project-details {
+    max-width: 100%;
+    text-align: center;
+    gap: 1.4rem;
+
+    h3 {
+      margin-top: 2rem;
+    }
+  }
+
+  .project-icons {
+    justify-content: center;
+  }
+}
